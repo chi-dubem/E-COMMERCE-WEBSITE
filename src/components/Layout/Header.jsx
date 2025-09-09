@@ -4,15 +4,19 @@ import User_Jsx from '../../assets/Jsxs/User_Jsx';
 import Like_jsx from '../../assets/Jsxs/Like_jsx';
 import Search_jsx from '../../assets/Jsxs/Search_jsx';
 import Menu_jsx from '../../assets/Jsxs/menu_jsx';
+import Logo from '../Logo';
 
-const Header = () => {
+const Header = ({setDisplayCart }) => {
+  function handelDisplayCart() {
+    setDisplayCart(
+      (prev => true)
+    )
+  }
   return (
     <div>
       <div className=" flex gap-10 px-2">
         <div className="flex  gap-10 w-full justify-center">
-          <div className="shrink-0">
-            <img src="src\assets\images\logo1.png" className="h-20" />
-          </div>
+          <Logo />
           <div className="flex flex-1 items-center rounded-4xl bg-gray-100 w-80 max-w-[1000px]">
             <input
               type="text"
@@ -24,9 +28,15 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-10 ">
-            <ShoppingCart_jsx />
-            <Like_jsx />
-            <User_Jsx />
+            <div onClick={handelDisplayCart} className="hover:border">
+              <ShoppingCart_jsx />
+            </div>
+            <div className="hover:border">
+              <Like_jsx />
+            </div>
+            <div className="hover:border">
+              <User_Jsx />
+            </div>
           </div>
         </div>
       </div>
@@ -37,6 +47,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header

@@ -4,11 +4,12 @@ import User_Jsx from '../assets/Jsxs/User_Jsx';
 import Electronics_jsx from '../assets/Jsxs/Electronics_jsx';
 import Home1 from '../assets/Jsxs/Home1'
 import Card from './Card';
+import Data from '../utlils/data.js'
 
 const Body = () => {
   return (
     <div className="bg-[#F7F7F7]">
-      <div className="h-full mx-auto bg-[#F7F7F7] lg:w-[60%] lg:min-w-[755px] py-4 ">
+      <div className="h-full mx-auto bg-[#F7F7F7] lg:w-[50%] lg:min-w-[755px] py-4 ">
         {/* hero section */}
         <div className="w-full relative lg:rounded-2xl overflow-hidden">
           <img
@@ -42,20 +43,16 @@ const Body = () => {
         <div className="px-4">
           <span className="text-2xl font-bold">Featured Products</span>
           {/* card */}
-          <div className="grid my-10 grid-flow-row grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <div className="grid my-10 grid-flow-row grid-cols-2 gap-8 md:grid-cols-3">
+            {Data.map((product) => (
+              <Card key={product.id} product={product} />
+            ))}
           </div>
         </div>
         <div className="flex justify-between items-center bg-[#e4e1ab] rounded-2xl p-5  w-full">
           <div>
-            <p className='text-2xl font-bold'>Special Offer</p>
-            <p className='text-2xl '>UP TO 30% OFF</p>
+            <p className="text-2xl font-bold">Special Offer</p>
+            <p className="text-2xl ">UP TO 30% OFF</p>
           </div>
           <div>
             <Button text="SHOP NOW" />

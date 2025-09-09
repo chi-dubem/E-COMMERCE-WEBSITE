@@ -11,23 +11,27 @@ const StarRating = ({ rating, totalStars = 6 }) => {
   return <div className="flex items-center">{stars}</div>;
 };
 
-const Card = () => {
+const Card = ({product}) => {
 
   return (
     <div className="flex flex-col p-6 rounded-lg shadow-lg bg-white w-fit ">
-      <div className="w-48 h-48 mb-4">
+      <div className="w-full  mb-4">
         <img
-          src="src\assets\images\Shorte.jpg"
-          className="w-full h-full object-cover rounded-lg"
+          src={`src/assets/images/${product.image}`}
+          className="w-full h-[200px] object-cover rounded-lg"
         />
       </div>
-      <h1 className="text-xl font-bold mb-2">Casual T-shirt</h1>
+      <h1 className="text-xl font-bold mb-2">{product.name}</h1>
       <div className="flex items-center">
-        <StarRating rating={4} />
-        <span className="my-auto pl-3 pb-2 text-gray-500">123</span>
+        <StarRating rating={3} />
+        <span className="my-auto pl-3 pb-2 text-gray-500">
+          {product.review}
+        </span>
       </div>
-      <span className=" text-gray-500 font-bold text-[12px]">$123.00</span>
-      <span className="font-bold text-[20px]">$123.00</span>
+      <span className=" text-gray-500 font-bold text-[12px]">
+        ${product.originlPrice}
+      </span>
+      <span className="font-bold text-[20px]">${product.discountedPrice}</span>
       <Button text="ADD TO CART" />
     </div>
   );
