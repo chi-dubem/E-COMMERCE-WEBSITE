@@ -5,7 +5,7 @@ const Star = ({ color }) => <Star_jsx color={color} />;
 const StarRating = ({ rating, totalStars = 6 }) => {
   const stars = [];
   for (let i = 1; i <= totalStars; i++) {
-    stars.push(<Star key={i} color={i <= rating ? "gold" : "gray"} />);
+    stars.push(<Star key={i} color={i <= rating ? "red" : "gray"} />);
   }
 
   return <div className="flex items-center">{stars}</div>;
