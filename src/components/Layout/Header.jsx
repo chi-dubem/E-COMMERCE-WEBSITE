@@ -1,4 +1,3 @@
-import React from 'react' 
 import ShoppingCart_jsx from '../../assets/Jsxs/ShoppingCart_jsx';
 import User_Jsx from '../../assets/Jsxs/User_Jsx';
 import Like_jsx from '../../assets/Jsxs/Like_jsx';
@@ -9,7 +8,7 @@ import Logo from '../Logo';
 const Header = ({setDisplayCart }) => {
   function handelDisplayCart() {
     setDisplayCart(
-      (prev => true)
+      (prev) => prev = true
     )
   }
   return (

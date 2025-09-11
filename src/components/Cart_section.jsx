@@ -1,7 +1,8 @@
 import Logo from "./Logo";
 import Cart from "./cart";
 
-const Cart_section = ({displayCart, setDisplayCart}) => {
+const Cart_section = ({displayCart, setDisplayCart, cart }) => {
+  const newCart = Object.values(cart)
   return (
     <div
       className={`${
@@ -12,19 +13,15 @@ const Cart_section = ({displayCart, setDisplayCart}) => {
       <div className="w-full lg:w-[80%] bg-white z-[5] mx-auto p-5 mt-30">
         <div className="flex items-center">
           <Logo />
-          <span className="mx-auto text-lg font-bold">(0) Cart Items</span>
+          <span className="mx-auto text-lg font-bold">
+            {newCart.lenght} Cart Items
+          </span>
         </div>
         <div className="flex gap-4">
           <div className="flex-1">
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
+            {cart.map((product) => (
+              <Cart product={product} key={product.id}/>
+            ))}
           </div>
           <div className="w-[30%] shadow-lg p-2 h-fit">
             <div>
@@ -47,7 +44,9 @@ const Cart_section = ({displayCart, setDisplayCart}) => {
               </div>
               <div className="mt-4 pt-4 border-t border-gray-200 flex justify-between items-center">
                 <span className="text-xl font-bold text-gray-800">Total</span>
-                <span className="text-xl font-bold text-indigo-600">$224.96</span>
+                <span className="text-xl font-bold text-indigo-600">
+                  $224.96
+                </span>
               </div>
             </div>
             <button className="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg mt-6 hover:bg-indigo-700 transition-colors">

@@ -1,12 +1,11 @@
-import React from 'react'
-import Button from './Button';
-import User_Jsx from '../assets/Jsxs/User_Jsx';
-import Electronics_jsx from '../assets/Jsxs/Electronics_jsx';
-import Home1 from '../assets/Jsxs/Home1'
-import Card from './Card';
-import Data from '../utlils/data.js'
+import Button from "./Button";
+import User_Jsx from "../assets/Jsxs/User_Jsx";
+import Electronics_jsx from "../assets/Jsxs/Electronics_jsx";
+import Home1 from "../assets/Jsxs/Home1";
+import Card from "./Card";
+import Data from "../utlils/data.js";
 
-const Body = () => {
+const Body = ({cart, setCart}) => {
   return (
     <div className="bg-[#F7F7F7]">
       <div className="h-full mx-auto bg-[#F7F7F7] lg:w-[50%] lg:min-w-[755px] py-4 ">
@@ -45,7 +44,12 @@ const Body = () => {
           {/* card */}
           <div className="grid my-10 grid-flow-row grid-cols-2 gap-8 md:grid-cols-3">
             {Data.map((product) => (
-              <Card key={product.id} product={product} />
+              <Card
+                key={product.id}
+                cart={cart}
+                setCart={setCart}
+                product={product}
+              />
             ))}
           </div>
         </div>
@@ -61,6 +65,6 @@ const Body = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Body
+export default Body;
