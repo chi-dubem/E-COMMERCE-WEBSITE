@@ -13,6 +13,7 @@ const App = () => {
         displayCart={displayCart}
         setDisplayCart={setDisplayCart}
         cart={cart}
+        setCart={setCart}
       />
       <Header setDisplayCart={setDisplayCart}/>
       <Body cart={cart} setCart={setCart}/>
