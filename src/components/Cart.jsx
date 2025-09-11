@@ -5,7 +5,6 @@ const Cart = ({product}) => {
       <div className="flex-shrink-0 w-32 h-32 md:w-24 md:h-24 rounded-lg overflow-hidden mr-4 md:mr-6">
         <img
           className="w-full h-full object-cover"
-          // src="src\assets\images\Shorte.jpg"
           src={`src/assets/images/${product.image}`}
         />
       </div>

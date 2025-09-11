@@ -2,7 +2,6 @@ import Logo from "./Logo";
 import Cart from "./cart";
 
 const Cart_section = ({displayCart, setDisplayCart, cart }) => {
-  const newCart = Object.values(cart)
   return (
     <div
       className={`${
@@ -14,7 +13,7 @@ const Cart_section = ({displayCart, setDisplayCart, cart }) => {
         <div className="flex items-center">
           <Logo />
           <span className="mx-auto text-lg font-bold">
-            {newCart.lenght} Cart Items
+            {cart.length} Cart Items
           </span>
         </div>
         <div className="flex gap-4">
