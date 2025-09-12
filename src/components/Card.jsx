@@ -32,7 +32,7 @@ const Card = ({ product, cart,setCart }) => {
     <div className="flex flex-col p-6 rounded-lg shadow-lg bg-white w-fit ">
       <div className="w-full  mb-4">
         <img
-          src={`src/assets/images/${product.image}`}
+          src={`${product.image}`}
           className="w-full h-[200px] object-cover rounded-lg"
         />
       </div>

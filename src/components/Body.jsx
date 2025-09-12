@@ -12,7 +12,7 @@ const Body = ({cart, setCart}) => {
         {/* hero section */}
         <div className="w-full relative lg:rounded-2xl overflow-hidden">
           <img
-            src="src\assets\images\hero section.png"
+            src="hero section.png"
             className="w-[100%] h-[400px]"
           />
           <div className="absolute top-20 left-20 text-white font-bold w-[250px]">
