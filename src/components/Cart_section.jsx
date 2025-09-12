@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import Cart from "./cart";
+import Cart from "./Cart"
 
 const Cart_section = ({displayCart, setDisplayCart, cart, setCart }) => {
   const Subtotal = cart.reduce((acc, item) => acc + item.discountedPrice * item.quantity, 0);
