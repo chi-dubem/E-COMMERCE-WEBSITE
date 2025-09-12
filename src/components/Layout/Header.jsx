@@ -2,7 +2,7 @@ import ShoppingCart_jsx from '../../assets/Jsxs/ShoppingCart_jsx';
 import User_Jsx from '../../assets/Jsxs/User_Jsx';
 import Like_jsx from '../../assets/Jsxs/Like_jsx';
 import Search_jsx from '../../assets/Jsxs/Search_jsx';
-import Menu_jsx from '../../assets/Jsxs/menu_jsx';
+import Menu_jsx from '../../assets/Jsxs/Menu_jsx';
 import Logo from '../Logo';
 
 const Header = ({setDisplayCart }) => {
