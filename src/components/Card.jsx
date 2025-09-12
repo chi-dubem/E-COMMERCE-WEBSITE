@@ -1,4 +1,4 @@
-import Star_jsx from "../assets/Jsxs/star_jsx";
+import Star_jsx from "../assets/Jsxs/Star_jsx";
 import Button from "./Button";
 const Star = ({ color }) => <Star_jsx color={color} />;
 
